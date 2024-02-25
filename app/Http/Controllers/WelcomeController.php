@@ -10,13 +10,9 @@ class WelcomeController extends Controller
         return 'Hello World';
         }
     
-    public function index(){
-        return 'Selamat Datang';
-    }
-    public function about(){
-        return 'Lalu Immaratul Ardhi Ganeru 2241720169';
-    }
-    public function articles($id){
-        return 'Halaman Artikel dengan Id '.$id;
+    public function greeting(){
+        return view('blog.hello')
+            ->with('name', 'Immar')
+            ->with('occupation', 'Astronaut');
     }
 }
